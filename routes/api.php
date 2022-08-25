@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ChartController;
+use App\Http\Controllers\Admin\ClientReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ use App\Http\Controllers\Admin\ChartController;
 // });
 
 Route::get('/chartdata', [ChartController::class, 'onAllSelect']);
+// client reviews route
+Route::get('/clientreviewdata', [ClientReviewController::class, 'onAllSelect']);
