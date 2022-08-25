@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ChartController;
 use App\Http\Controllers\Admin\ClientReviewController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\CoursesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::get('/chartdata', [ChartController::class, 'onAllSelect']);
 Route::get('/clientreviewdata', [ClientReviewController::class, 'onAllSelect']);
 // Contact form route
 Route::post('/contactsend', [ContactController::class, 'onContactSend']);
+// Contact form route
+Route::get('/coursehome', [CoursesController::class, 'onSelectFour']);
+Route::get('/courseall', [CoursesController::class, 'onSelectAll']);
+Route::post('/coursedetails', [CoursesController::class, 'onSelectDetails']);
