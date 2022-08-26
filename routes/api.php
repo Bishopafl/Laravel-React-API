@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CoursesController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\InformationController;
+use App\Http\Controllers\Admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,5 @@ Route::get('/informationdata', [InformationController::class, 'onAllSelect']);
 Route::get('/informationdata/refund', [InformationController::class, 'onAllRefund']);
 Route::get('/informationdata/terms', [InformationController::class, 'onAllTerms']);
 Route::get('/informationdata/privacy', [InformationController::class, 'onAllPrivacy']);
+// Service Routes
+Route::get('/servicedata', [ServiceController::class, 'serviceView']);
