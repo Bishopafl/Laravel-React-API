@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ArtworkController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ChartController;
@@ -34,3 +35,5 @@ Route::get('/courseall', [CoursesController::class, 'onSelectAll']);
 Route::post('/coursedetails', [CoursesController::class, 'onSelectDetails']);
 // footer routes
 Route::get('/footerdata', [FooterController::class, 'onAllSelect']);
+// artwork routes
+Route::get('/artworkdata', [ArtworkController::class, 'onAllSelect']);
