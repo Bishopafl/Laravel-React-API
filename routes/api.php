@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ChartController;
 use App\Http\Controllers\Admin\ClientReviewController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CoursesController;
+use App\Http\Controllers\Admin\FooterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::post('/contactsend', [ContactController::class, 'onContactSend']);
 Route::get('/coursehome', [CoursesController::class, 'onSelectFour']);
 Route::get('/courseall', [CoursesController::class, 'onSelectAll']);
 Route::post('/coursedetails', [CoursesController::class, 'onSelectDetails']);
+// footer routes
+Route::get('/footerdata', [FooterController::class, 'onAllSelect']);
