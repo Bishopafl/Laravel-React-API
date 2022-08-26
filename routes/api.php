@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CoursesController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\InformationController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
 
 /*
@@ -31,7 +32,7 @@ Route::get('/chartdata', [ChartController::class, 'onAllSelect']);
 Route::get('/clientreviewdata', [ClientReviewController::class, 'onAllSelect']);
 // Contact form route
 Route::post('/contactsend', [ContactController::class, 'onContactSend']);
-// Contact form route
+// Course All route
 Route::get('/coursehome', [CoursesController::class, 'onSelectFour']);
 Route::get('/courseall', [CoursesController::class, 'onSelectAll']);
 Route::post('/coursedetails', [CoursesController::class, 'onSelectDetails']);
@@ -46,3 +47,7 @@ Route::get('/informationdata/terms', [InformationController::class, 'onAllTerms'
 Route::get('/informationdata/privacy', [InformationController::class, 'onAllPrivacy']);
 // Service Routes
 Route::get('/servicedata', [ServiceController::class, 'serviceView']);
+// Project All Routes
+Route::get('/projectdata', [ProjectController::class, 'onAllSelect']);
+Route::get('/projectdata/home', [ProjectController::class, 'onSelectThree']);
+Route::post('/projectdata/details', [ProjectController::class, 'allProjectDetails']);
