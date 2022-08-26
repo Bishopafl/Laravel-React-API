@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ClientReviewController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CoursesController;
 use App\Http\Controllers\Admin\FooterController;
+use App\Http\Controllers\Admin\HomePageEtcController;
 use App\Http\Controllers\Admin\InformationController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -51,3 +52,8 @@ Route::get('/servicedata', [ServiceController::class, 'serviceView']);
 Route::get('/projectdata', [ProjectController::class, 'onAllSelect']);
 Route::get('/projectdata/home', [ProjectController::class, 'onSelectThree']);
 Route::post('/projectdata/details', [ProjectController::class, 'allProjectDetails']);
+// Home Etc All Routes
+Route::get('/homedata', [HomePageEtcController::class, 'selectTotalHome']);
+Route::get('/homedata/video', [HomePageEtcController::class, 'selectVideo']);
+Route::get('/homedata/tech', [HomePageEtcController::class, 'selectTech']);
+Route::get('/homedata/title', [HomePageEtcController::class, 'selectHomeTitleAndSubtitle']);
