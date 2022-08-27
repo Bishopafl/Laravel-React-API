@@ -34,9 +34,9 @@ Route::get('/clientreviewdata', [ClientReviewController::class, 'onAllSelect']);
 // Contact form route
 Route::post('/contactsend', [ContactController::class, 'onContactSend']);
 // Course All route
-Route::get('/coursehome', [CoursesController::class, 'onSelectFour']);
-Route::get('/courseall', [CoursesController::class, 'onSelectAll']);
-Route::post('/coursedetails', [CoursesController::class, 'onSelectDetails']);
+Route::get('/course/home', [CoursesController::class, 'onSelectFour']);
+Route::get('/course/all', [CoursesController::class, 'onSelectAll']);
+Route::post('/course/details', [CoursesController::class, 'onSelectDetails']);
 // footer routes
 Route::get('/footerdata', [FooterController::class, 'onAllSelect']);
 // artwork routes
