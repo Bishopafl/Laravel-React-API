@@ -28,4 +28,9 @@ class InformationController extends Controller
         return $result;
     }
 
+    public function onAllAbout() {
+        $result = Information::where('id', 1)->value('about');
+        return $result;
+    }
+
 }

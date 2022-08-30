@@ -43,6 +43,7 @@ Route::get('/footerdata', [FooterController::class, 'onAllSelect']);
 Route::get('/artworkdata', [ArtworkController::class, 'onAllSelect']);
 // information routes
 Route::get('/informationdata', [InformationController::class, 'onAllSelect']);
+Route::get('/informationdata/about', [InformationController::class, 'onAllAbout']);
 Route::get('/informationdata/refund', [InformationController::class, 'onAllRefund']);
 Route::get('/informationdata/terms', [InformationController::class, 'onAllTerms']);
 Route::get('/informationdata/privacy', [InformationController::class, 'onAllPrivacy']);
