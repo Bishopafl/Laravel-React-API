@@ -8,11 +8,20 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
+    
+    
     public function onContactSend(Request $request) {
+        
+        $ContactArray = json_decode($request->getContent(), true);
+        
+        $name = $ContactArray['name'];
+        $email = $ContactArray['email'];
+        $message = $ContactArray['message'];
+        
         $result = Contact::insert([
-            'name' => $request->name,
-            'email' => $request->email,
-            'message' => $request->message,
+            'name' => $name,
+            'email' => $email,
+            'message' => $message,
         ]);
 
         if ($result == true) {
