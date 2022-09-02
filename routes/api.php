@@ -52,7 +52,7 @@ Route::get('/servicedata', [ServiceController::class, 'serviceView']);
 // Project All Routes
 Route::get('/projectdata', [ProjectController::class, 'onAllSelect']);
 Route::get('/projectdata/home', [ProjectController::class, 'onSelectThree']);
-Route::post('/projectdata/details', [ProjectController::class, 'allProjectDetails']);
+Route::get('/projectdata/details/{projectId}', [ProjectController::class, 'allProjectDetails']);
 // Home Etc All Routes
 Route::get('/homedata', [HomePageEtcController::class, 'selectTotalHome']);
 Route::get('/homedata/video', [HomePageEtcController::class, 'selectVideo']);
