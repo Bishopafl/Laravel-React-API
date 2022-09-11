@@ -35,7 +35,7 @@ class InformationController extends Controller
     
     public function AllInformation() {
         $result = Information::all();
-        return view('backend.information.all_information', compact('result'))
+        return view('backend.information.all_information', compact('result'));
     }
 
 }

@@ -41,7 +41,7 @@ Route::prefix('admin')->group(function() {
     Route::post('/user/profile/store', [AdminUserController::class, 'UserProfileStore'])->name('user.profile.store');
     Route::get('/change/password', [AdminUserController::class, 'UserChangePassword'])->name('change.password');
     Route::post('/change/password/update', [AdminUserController::class, 'UserPasswordUpdate'])->name('change.password.update');
-    all.information 
+    
 });
 
 /**
@@ -50,5 +50,6 @@ Route::prefix('admin')->group(function() {
 Route::prefix('information')->group(function() {
 
     Route::get('/information/all', [InformationController::class, 'AllInformation'])->name('all.information');
+    Route::get('/information/add', [InformationController::class, 'AddInformation'])->name('add.information');
 
 });
