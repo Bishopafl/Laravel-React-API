@@ -30,10 +30,14 @@
                 </div>
                 <ul class="navbar-nav header-right main-notification">
                     <li class="nav-item dropdown header-profile">
+                        @php
+                            $authId = Auth::user()->id;
+                            $user = App\Models\User::find($authId);
+                        @endphp
                         <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                            <img src="{{ asset('backend/images/profile/pic1.jpg') }}" width="20" alt=""/>
+                            <img src="{{ (!empty($user->profile_photo_path)) ? url('upload/user_images/' . $user->profile_photo_path)  : url('/upload/no_image.jpg')}}" width="20" alt=""/>
                             <div class="header-info">
-                                <span>Johndoe</span>
+                                <span>{{ $user->name }}</span>
                                 <small>Super Admin</small>
                             </div>
                         </a>
