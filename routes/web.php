@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\InformationController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,5 +56,19 @@ Route::prefix('information')->group(function() {
     Route::get('/information/edit/{id}', [InformationController::class, 'EditInformation'])->name('edit.information');
     Route::get('/information/delete/{id}', [InformationController::class, 'DeleteInformation'])->name('delete.information');
     Route::post('/information/update/{id}', [InformationController::class, 'UpdateInformation'])->name('information.update');
+
+});
+
+/**
+ * All Services Routes
+ */
+Route::prefix('service')->group(function() {
+
+    Route::get('/service/all', [ServiceController::class, 'AllServices'])->name('all.services');
+    Route::get('/service/add', [ServiceController::class, 'AddServices'])->name('add.services');
+    Route::post('/service/store', [ServiceController::class, 'StoreServices'])->name('services.store');
+    Route::get('/service/edit/{id}', [ServiceController::class, 'EditServices'])->name('edit.services');
+    Route::get('/service/delete/{id}', [ServiceController::class, 'DeleteServices'])->name('delete.services');
+    Route::post('/service/update/{id}', [ServiceController::class, 'UpdateServices'])->name('services.update');
 
 });
