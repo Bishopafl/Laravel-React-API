@@ -52,6 +52,8 @@ Route::prefix('information')->group(function() {
     Route::get('/information/all', [InformationController::class, 'AllInformation'])->name('all.information');
     Route::get('/information/add', [InformationController::class, 'AddInformation'])->name('add.information');
     Route::post('/information/store', [InformationController::class, 'StoreInformation'])->name('information.store');
-    Route::post('/information/edit/{id}', [InformationController::class, 'EditInformation'])->name('edit.information');
+    Route::get('/information/edit/{id}', [InformationController::class, 'EditInformation'])->name('edit.information');
+    Route::get('/information/delete/{id}', [InformationController::class, 'DeleteInformation'])->name('delete.information');
+    Route::post('/information/update/{id}', [InformationController::class, 'UpdateInformation'])->name('information.update');
 
 });

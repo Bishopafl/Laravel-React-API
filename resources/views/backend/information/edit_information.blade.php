@@ -7,39 +7,47 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Add Information</h4>
+                        <h4 class="card-title">Edit Information</h4>
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form method="post" action="{{ route('information.store') }}">
+                            <form method="post" action="{{ route('information.update', $information->id) }}">
                                 @csrf
                                 <div class="form-group row">
                                     <label class="info-title col-sm-3 col-form-label">About Information</label>
                                     <div class="col-sm-9">
-                                        <textarea class="form-control" name="about" id="summernote-about"></textarea>
+                                        <textarea class="form-control" name="about" id="summernote-about">
+                                            {{ $information->about }}
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="info-title col-sm-3 col-form-label">Refund Policy</label>
                                     <div class="col-sm-9">
-                                        <textarea class="form-control" name="refund" id="summernote-refund"></textarea>
+                                        <textarea class="form-control" name="refund" id="summernote-refund">
+                                            {{ $information->refund }}
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="info-title col-sm-3 col-form-label">Terms and Conditions</label>
                                     <div class="col-sm-9">
-                                        <textarea class="form-control" name="terms" id="summernote-terms"></textarea>
+                                        <textarea class="form-control" name="terms" id="summernote-terms">
+                                            {{ $information->terms }}
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="info-title col-sm-3 col-form-label">Privacy Policy</label>
                                     <div class="col-sm-9">
-                                        <textarea class="form-control" name="privacy" id="summernote-privacy"></textarea>
+                                        <textarea class="form-control" name="privacy" id="summernote-privacy">
+                                            {{ $information->privacy }}
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-10">
-                                        <input type="submit" class="btn btn-primary" value="Add Footer Information">
+                                        <input type="submit" class="btn btn-primary" value="Edit Footer Information">
                                     </div>
                                 </div>
                             </form>

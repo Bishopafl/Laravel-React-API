@@ -64,4 +64,28 @@ class InformationController extends Controller
         return view('backend.information.edit_information', compact('information'));
     }
 
+    public function UpdateInformation(Request $request, $id) {
+        Information::findOrFail($id)->update([
+            'about' => $request->about,
+            'refund' => $request->refund,
+            'terms' => $request->terms,
+            'privacy' => $request->privacy,
+        ]);
+        $notification = array(
+            'message' => 'Information Updated Successfully!',
+            'alert-type' => 'success',
+        );
+        return redirect()->route('all.information')->with($notification);
+    }
+
+    public function DeleteInformation($id){
+        Information::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Information Deleted Successfully',
+            'alert-type' => 'warning',
+        );
+        return redirect()->back()->with($notification);
+    }
+
 }
