@@ -61,8 +61,8 @@
                 <span class="nav-text">Artwork</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('all.courses') }}">All Artwork</a></li>
-                    <li><a href="{{ route('add.courses') }}">Add Artwork</a></li>
+                    <li><a href="{{ route('all.artworks') }}">All Artwork</a></li>
+                    <li><a href="{{ route('add.artworks') }}">Add Artwork</a></li>
                 </ul>
             </li>
 

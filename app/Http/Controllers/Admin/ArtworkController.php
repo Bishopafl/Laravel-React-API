@@ -12,4 +12,9 @@ class ArtworkController extends Controller
         $results = Artwork::all();
         return $results;
     }
+
+    public function AllArtworks() {
+        $artwork = Artwork::all();
+        return view('backend.artwork.all_artwork', compact('artwork'));
+    }
 }
