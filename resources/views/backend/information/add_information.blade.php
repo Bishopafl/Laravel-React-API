@@ -13,31 +13,31 @@
                         <div class="basic-form">
                             <form method="post" action="{{ route('information.store') }}">
                                 @csrf
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">About Information</label>
                                     <div class="col-sm-9">
                                         <textarea class="form-control" name="about" id="summernote-about"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">Refund Policy</label>
                                     <div class="col-sm-9">
                                         <textarea class="form-control" name="refund" id="summernote-refund"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">Terms and Conditions</label>
                                     <div class="col-sm-9">
                                         <textarea class="form-control" name="terms" id="summernote-terms"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">Privacy Policy</label>
                                     <div class="col-sm-9">
                                         <textarea class="form-control" name="privacy" id="summernote-privacy"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <div class="col-sm-10">
                                         <input type="submit" class="btn btn-primary" value="Add Footer Information">
                                     </div>

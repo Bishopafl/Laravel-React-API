@@ -33,7 +33,9 @@ class InformationController extends Controller
         $result = Information::where('id', 1)->value('about');
         return $result;
     }
-    // Backend Admin Methods
+    /**
+     * Backend Admin Methods
+     *  */ 
     public function AllInformation() {
         $result = Information::all();
         return view('backend.information.all_information', compact('result'));

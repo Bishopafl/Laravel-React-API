@@ -14,25 +14,25 @@
                         <div class="basic-form">
                             <form method="post" action="{{ route('change.password.update') }}">
                                 @csrf
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">Current Password</label>
                                     <div class="col-sm-9">
                                         <input type="password" id="current_password" name="oldpassword" class="form-control input-default">
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">New Password</label>
                                     <div class="col-sm-9">
                                         <input type="password" id="password" name="password" class="form-control input-default">
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="info-title col-sm-3 col-form-label">Confirm Password</label>
                                     <div class="col-sm-9">
                                         <input type="password" id="password_confirmations" name="password_confirmation" class="form-control input-default">
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <div class="col-sm-10">
                                         <input type="submit" class="btn btn-primary" value="Change Password">
                                     </div>

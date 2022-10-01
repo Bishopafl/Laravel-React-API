@@ -17,7 +17,7 @@
             </li>
 
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-061-puzzle"></i>
+                    <i class="flaticon-056-information"></i>
                     <span class="nav-text">Information</span>
                 </a>
                 <ul aria-expanded="false">
@@ -27,14 +27,46 @@
             </li>
 
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="flaticon-061-puzzle"></i>
+                <i class="flaticon-088-tools"></i>
                 <span class="nav-text">Services</span>
-            </a>
-            <ul aria-expanded="false">
-                <li><a href="{{ route('all.services') }}">All Services</a></li>
-                <li><a href="{{ route('add.services') }}">Add Services</a></li>
-            </ul>
-        </li>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.services') }}">All Services</a></li>
+                    <li><a href="{{ route('add.services') }}">Add Services</a></li>
+                </ul>
+            </li>
+
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-155-usb"></i>
+                <span class="nav-text">Projects</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.projects') }}">All Projects</a></li>
+                    <li><a href="{{ route('add.projects') }}">Add Project</a></li>
+                </ul>
+            </li>
+
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-061-puzzle"></i>
+                <span class="nav-text">Courses</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.courses') }}">All Courses</a></li>
+                    <li><a href="{{ route('add.courses') }}">Add Courses</a></li>
+                </ul>
+            </li>
+
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-162-edit"></i>
+                <span class="nav-text">Artwork</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.courses') }}">All Artwork</a></li>
+                    <li><a href="{{ route('add.courses') }}">Add Artwork</a></li>
+                </ul>
+            </li>
+
+            
 
              
             

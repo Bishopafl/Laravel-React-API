@@ -4,37 +4,6 @@
 
 <div class="content-body" style="min-height: 850px;">
     <div class="container-fluid">
-        <!-- Add Project -->
-        <div class="modal fade" id="addProjectSidebar">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Create Project</h5>
-                        <button type="button" class="close" data-dismiss="modal"><span>×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Project Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Deadline</label>
-                                <input type="date" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-black font-w500">Client Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-primary">CREATE</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row page-titles mx-0">
             <div class="col-sm-12 p-md-0">
                 <div class="welcome-text">
@@ -56,13 +25,13 @@
                         <div class="basic-form">
                             <form method="post" action="{{ route('user.profile.store') }}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="col-sm-3 col-form-label">User Name</label>
                                     <div class="col-sm-9">
                                         <input type="text" name="name" class="form-control" value="{{ $user->name }}">
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <label class="col-sm-3 col-form-label">Email</label>
                                     <div class="col-sm-9">
                                         <input type="email" name="email" class="form-control" value="{{ $user->email }}">
@@ -86,7 +55,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <div class="form-group row">
+                                <div class="form-group row input-warning-o">
                                     <div class="col-sm-10">
                                         <input type="submit" class="btn btn-primary" value="Update Profile">
                                     </div>
