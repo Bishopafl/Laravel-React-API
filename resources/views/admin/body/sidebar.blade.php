@@ -76,6 +76,16 @@
                 </ul>
             </li>
 
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-162-edit"></i>
+                <span class="nav-text">Client Reviews</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.reviews') }}">All Client Reviews</a></li>
+                    <li><a href="{{ route('add.reviews') }}">Add Client Review</a></li>
+                </ul>
+            </li>
+
             
 
              

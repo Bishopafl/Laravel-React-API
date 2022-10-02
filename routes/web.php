@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ArtworkController;
 use App\Http\Controllers\Admin\ChartController;
+use App\Http\Controllers\Admin\ClientReviewController;
 use App\Http\Controllers\Admin\CoursesController;
 use App\Http\Controllers\Admin\InformationController;
 use App\Http\Controllers\Admin\ProjectController;
@@ -117,4 +118,16 @@ Route::prefix('chart')->group(function() {
     Route::get('/charts/edit/{id}', [ChartController::class, 'EditCharts'])->name('edit.charts');
     Route::get('/charts/delete/{id}', [ChartController::class, 'DeleteCharts'])->name('delete.charts');
     Route::post('/charts/update/', [ChartController::class, 'UpdateCharts'])->name('charts.update');
+});
+
+/**
+ * All Client Review Routes
+ */
+Route::prefix('review')->group(function() {
+    Route::get('/reviews/all', [ClientReviewController::class, 'AllReviews'])->name('all.reviews');
+    Route::get('/reviews/add', [ClientReviewController::class, 'AddReviews'])->name('add.reviews');
+    Route::post('/reviews/store', [ClientReviewController::class, 'StoreReviews'])->name('reviews.store');
+    Route::get('/reviews/edit/{id}', [ClientReviewController::class, 'EditReviews'])->name('edit.reviews');
+    Route::get('/reviews/delete/{id}', [ClientReviewController::class, 'DeleteReviews'])->name('delete.reviews');
+    Route::post('/reviews/update/', [ClientReviewController::class, 'UpdateReviews'])->name('reviews.update');
 });
