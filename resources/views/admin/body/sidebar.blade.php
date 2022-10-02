@@ -66,6 +66,16 @@
                 </ul>
             </li>
 
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-150-pie-chart"></i>
+                <span class="nav-text">Charts</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.charts') }}">All Charts</a></li>
+                    <li><a href="{{ route('add.charts') }}">Add Charts</a></li>
+                </ul>
+            </li>
+
             
 
              
